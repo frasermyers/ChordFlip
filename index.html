@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<!-- SETUP ------------------------------------------------------------------------> 
+<html lang="en">
+
+<!-- HEAD -------------------------------------------------------------------------> 
+
+<head>
+    <meta charset="UTF-8"> <!-- character set -->
+    <title>Chord Flip</title> <!-- title of document -->
+    <link rel="stylesheet" href="style.css"> <!-- links css -->
+</head>
+
+<!-- BODY -------------------------------------------------------------------------> 
+
+<body>
+
+    <!-- CHORD BOARD --------------------------------------------------------------> 
+
+    <div id="playablearea">
+
+
+    <div id="chordboard">
+        <!-- 1: Container for a square INSIDE the game board -->
+        <div class="square" id="chordboard1"></div>
+        <button class="swapbutton" id="swap1">swap</button>
+        <div class="square" id="chordboard2"></div>
+        <button class="swapbutton" id="swap2">swap</button>
+        <div class="square" id="chordboard3"></div>
+        <button class="swapbutton" id="swap3">swap</button>
+        <div class="square" id="chordboard4"></div>
+        <button class="swapbutton" id="swap5">swap</button>
+        <div class="square" id="chordboard5"></div>
+        <button class="swapbutton" id="swap6">swap</button>
+        <div class="square" id="chordboard6"></div>
+        <button class="swapbutton" id="swap7">swap</button>
+        <div class="square" id="chordboard7"></div>
+        <button class="swapbutton" id="swap8">swap</button>
+        <div class="square" id="chordboard8"></div>
+        <button class="swapbutton" id="swap9">swap</button>
+        <div class="square" id="chordboard1"></div>
+        <button class="swapbutton" id="swap10">swap</button>
+        <div class="square" id="chordboard2"></div>
+        <button class="swapbutton" id="swap11">swap</button>
+        <div class="square" id="chordboard3"></div>
+        <button class="swapbutton" id="swap12">swap</button>
+        <div class="square" id="chordboard4"></div>
+        <button class="swapbutton" id="swap13">swap</button>
+        <div class="square" id="chordboard5"></div>
+        <button class="swapbutton" id="swap14">swap</button>
+        <div class="square" id="chordboard6"></div>
+        <button class="swapbutton" id="swap15">swap</button>
+        <div class="square" id="chordboard7"></div>
+        <button class="swapbutton" id="swap15">swap</button>
+        <div class="square" id="chordboard8"></div>
+        <div class="swapbutton2" id="swap8"></div>
+    </div>
+    
+
+    <!--div class="flipbuttonboard">
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+        <button class="flipbutton">flip</button>
+    </div-->
+
+    <!-- CHORD OPTIONS ------------------------------------------------------------>
+
+
+    <div id="chordoptions">
+        
+           <div  id="chordsquare1" class="chordsquare">
+
+           </div>
+            <!--img src="cards/Sun-1-Maj.png" id="Sun-1-Maj" class="chess-piece" draggable/--> 
+        
+        <div>
+           <div id="chordsquare2" class="chordsquare"></div>
+            <!--img src="cards/Sun-2-Min.png" id="Sun-2-Min" class="chess-piece" draggable/-->
+        </div>
+        <div>
+            <div id="chordsquare3" class="chordsquare"></div>
+            <!--img src="cards/Sun-3-Min.png" id="Sun-3-Min" class="chess-piece" draggable/-->
+        </div>
+        <div>
+            <div id="chordsquare4" class="chordsquare"></div>
+            <!--img src="cards/Sun-4-Maj.png" id="Sun-4-Maj" class="chess-piece" draggable/-->
+        </div>
+        <div>
+            <div id="chordsquare5" class="chordsquare"></div>
+            <!--img src="cards/Sun-4-Maj.png" id="Sun-4-Maj" class="chess-piece" draggable/-->
+        </div>
+        <div>
+            <div id="chordsquare6" class="chordsquare"></div>
+            <!--img src="cards/Sun-4-Maj.png" id="Sun-4-Maj" class="chess-piece" draggable/-->
+        </div>
+        <div>
+            <div id="chordsquare7" class="chordsquare"></div>
+            <!--img src="cards/Sun-4-Maj.png" id="Sun-4-Maj" class="chess-piece" draggable/-->
+        </div>
+
+
+        
+    </div>
+
+    <div class="sunmoonbuttons">
+        <button class="sunmoonbutton" id="sunbutton">
+            Major
+        </button>
+        <button class="sunmoonbutton" id="moonbutton">
+            Minor
+        </button>
+
+    </div>
+
+    <!-- INFO ---------------------------------------------------------------------->
+
+    <p id="info"></p>
+
+    <script src="index.js"></script> <!-- links the javascript-->
+</div>
+
+</body>
+
+<!-- END -->
+</html>
