@@ -13,7 +13,7 @@ console.log(swapbuttons)
 // pick out the info display, select element with ID info after '#info'
 const infoDisplay = document.querySelector("#info")
 
-
+var versionnumber = "v0.1";
 var imagearray = [];
 var imagearrayminor = [];
 
@@ -210,6 +210,7 @@ function populatorArraymoon (){
 
 window.onload = function () {
     populatorArray()
+    document.getElementById("versionnumber").innerHTML = versionnumber;
     sunmoon = "";
 
 
