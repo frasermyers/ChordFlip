@@ -2,50 +2,17 @@ body {
     display: flex; /* flexible display */
     justify-content: center; /* center content horizontal */
     align-items: center; /* center content vertical */
-
     flex-direction: column; /* body items organised vertically */
     width: 100%;
     height: 100%;
     justify-content: center;
-
-
     font-family: "Poppins", sans-serif  ;
     background-color: rgb(155, 211, 217);
     overflow: hidden;
 
 }
 
-#chordboard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 70px;
-    margin-bottom: 300px;
-    margin: 40px;
-    width: 800px;
-    height: 300px;
-    flex-wrap: wrap;
-    row-gap:20px;
-}
-
-#chordoptions {
-    display: flex;
-    margin-top: 450px;
-}
-
-.swapbuttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 805px;
-    
-}
-
-.gametitle {
-    margin-top: 50px;
-}
-
-
+/* ENTIRE WHITE AREA */
 #playablearea {
     width: 950px;
     height: 1200px;
@@ -63,197 +30,131 @@ body {
     filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
 }
 
-.swapbutton {
-    border-width:1px;
-    border-style:solid;
-    border-color:rgb(171, 218, 214);
-    font-family: "Poppins",sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 0.8em;;
-    align-items: center;
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    color: rgba(62, 137, 130, 0.655);
-    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
-    background-color: rgb(255, 255, 255);
-}
+        /* TOP SECTION */
+        #chordboard {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 40px;
+            width: 850px;
+            height: 950px;
+            flex-wrap: wrap;
+            row-gap:20px;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px; 
+        }
+            /* Big squares inside Top Section */
+            .square {
+                width: 120px; 
+                height: 160px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                border-width:2px;
+                border-style:dashed;
+                border-color:rgb(171, 218, 214);
+                border-radius: 0.8em;
+                position: relative;
+            }
 
-.swapbutton2 {
-    font-family: "Poppins",sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-color: #e5e5e5;
-    margin: 10px;
-    width: 40px;
-    height: 40px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-}
+            /* Small squares inside Top Section */
+            .smallsquare {
+                width: 60px; 
+                height: 80px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                border-width:1px;
+                border-style:dashed;
+                border-color:rgb(171, 218, 214);
+                border-radius: 0.8em;
+                position: relative;
+            
+            }
 
-.swapbutton:active {
-    background: #e5e5e5;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
-     outline: none;
-  }
+        /* BOTTOM SECTION */
+        #chordoptions {
+            display: flex;
+            border-style: solid;
+            border-color: rgb(224, 0, 0);
+            border-width: 1px; 
+            width: 950px; 
+            height: 165px; 
+            justify-content: center;
 
-/* grab elements with class name square */
-.square {
-    width: 120px; /* set width of element */
-    height: 160px; /* set height of element */
-    display: flex; /* make squares flexbox */
-    justify-content: center; /* center content in one direction */
-    align-items: center; /* center content in other direction */
-    border-width:2px;
-    border-style:dashed;
-    border-color:rgb(171, 218, 214);
-    border-radius: 0.8em;
-    position: relative;
+        }
 
-}
+            /*  card Holders in Bottom Section */
+            .chordsquare {
+                width: 120px; 
+                height: 160px; 
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                border-style: solid;
+                border-color: rgb(224, 0, 0);
+                border-width: 1px; 
+            }
 
-/*
-.square img {
-    width:140px;
-    height: 180px;
-}*/
-.chordsquare {
-    width: 120px; /* set width of element */
-    height: 160px; /* set height of element */
-    display: flex; /* make squares flexbox */
-    justify-content: center; /* center content in one direction */
-    align-items: center; /* center content in other direction */
-    /*
-    border-style: solid;
-    border-color: black;
-    border-width: 1px; 
-    */
+        /* SECTION TO HOLD SCALE BUTTONS */
+        .sunmoonbuttons {
+            display: flex;
+            flex-direction: row;
+        }
 
-}
+            /* Individual Scale Buttons */
+            .sunmoonbutton {
+                border-width:1px;
+                border-style:solid;
+                border-color:rgb(171, 218, 214);
+                font-family: "Poppins",sans-serif;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                border-radius: 0.8em;;
+                align-items: center;
+                margin: 10px;
+                width: 70px;
+                height: 40px;
+                color: rgba(62, 137, 130, 0.655);
+                filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
+                background-color: rgb(255, 255, 255);
+            }
 
-.flipbuttonboard {
-    display: flex;
-    justify-content: space-between;
-    width: 790px;
-}
-
-.flipbutton {
-    border-width:1px;
-    border-style:solid;
-    border-color:rgb(171, 218, 214);
-    font-family: "Poppins",sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.8em;
-    margin-top: 10px;
-    margin-inline:  0px;
-    width: 60px;
-    height: 30px;
-    color: rgba(62, 137, 130, 0.655);
-    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.25));
-    background-color: rgb(255, 255, 255);
-}
-
-.flipbutton:active {
-    background: #e5e5e5;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
-     outline: none;
-  }
-
-
-
-
-.sunmoonbutton {
-    border-width:1px;
-    border-style:solid;
-    border-color:rgb(171, 218, 214);
-    font-family: "Poppins",sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 0.8em;;
-    align-items: center;
-    margin: 10px;
-    width: 70px;
-    height: 40px;
-    color: rgba(62, 137, 130, 0.655);
-    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
-    background-color: rgb(255, 255, 255);
-}
-
-.sunmoonbutton:active {
-    background: #e5e5e5;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
-     outline: none;
-  }
-
-.sunmoonbuttons {
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-path {
-    position: relative;
-}
-
-
-
-
-/* grab elements with class name beige */
-.back1 {
-    /* sets color of square */
-    background-color:rgb(230, 244, 248);
-}
-
-/* grab elements with class name brown */
-.back2 {
-    /* sets color of square */
-    background-color: rgb(244, 240, 247);
-}
-
-
+                /* Behavior for Scale Buttons */
+                .sunmoonbutton:active {
+                    background: #e5e5e5;
+                    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+                    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+                            box-shadow: inset 0px 0px 5px #c1c1c1;
+                    outline: none;
+                }
 
 .chess-piece {
-    width: 100px; /* set width of element */
-    height: 140px; /* set height of element */
-    position: relative;
-    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
-    cursor:move;
-    border-radius: 16px;
-    transition: transform 0.2s;
+        width: 90%; /* set width relative to the container */
+        height: 90%; /* set height relative to the container */
+        max-width: 100px; /* optional: set a maximum size if needed */
+        max-height: 140px; /* optional: set a maximum size if needed */
+        position: relative;
+        filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+        cursor: move;
+        border-radius: 0px;
+        transition: transform 0.2s;
+    }
     
-}
-
-.chess-piece.dragging {
-    opacity: 1;
-    transform: scale(1.05);
-
-}
 
 .imagesize {
-    width: 100px; /* set width of element */
-    height: 140px; /* set height of element */
-}
+    width: 100%; /* set width relative to the container */
+    height: 100%; /* set height relative to the container */
+    max-width: 100px; /* optional: set a maximum size if needed */
+    max-height: 140px; /* optional: set a maximum size if needed */
+    position: relative;
+    filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
+    cursor: move;
+    border-radius: 16px;
+    transition: transform 0.2s;}
 
-
-
-#info {
-    height: 30px;
-}
 
 .highlight {
     background-color: rgb(255, 239, 255);
@@ -268,7 +169,7 @@ path {
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
-    cursor: pointer;
+    cursor:crosshair;
     position: relative;
 }
 
@@ -295,10 +196,11 @@ path {
 }
 
 .cardinnerfront {
-
 }
 
 .cardinnerback {
     transform: rotateY(180deg);
 }
+
+
 
