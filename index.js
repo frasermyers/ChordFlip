@@ -1,6 +1,11 @@
 window.onload = function () {
+
     populatorArray()
     sunmoon = "";
+    document.getElementById("playablearea").addEventListener("dragstart", dragStartOther);
+    document.getElementById("chordboard").addEventListener("dragstart", dragStartOther);
+    document.getElementById("chordoptions").addEventListener("dragstart", dragStartOther);
+
 }
 
 // POPULATORS --------------------------------------------------------------------
@@ -17,13 +22,18 @@ window.onload = function () {
                 let card = document.createElement('div');
 
                 card.classList.add("chess-piece");
+                card.id = "chess-piece-" + (i+1);
+                card.setAttribute("unselectable", true);
                 card.setAttribute("draggable", true);
                 card.addEventListener("drag", dragging);
                 card.addEventListener("dragstart", dragStart);
                 cardinner = document.createElement('div');
+                cardinner.setAttribute("unselectable", true);
                 
                 cardfront = document.createElement('div');
+                cardfront.setAttribute("unselectable", true);
                 cardback = document.createElement('div');
+                cardback.setAttribute("unselectable", true);
                 cardinner.classList.add("cardinner");
                 
                 cardfront.classList.add("cardinnerfront");
@@ -40,6 +50,8 @@ window.onload = function () {
 
                 imgfront.classList.add("imagesize");
                 imgback.classList.add("imagesize");
+                imgfront.setAttribute("unselectable", true);
+                imgback.setAttribute("unselectable", true);
 
                 imgfront.setAttribute("draggable", false);
                 imgback.setAttribute("draggable", false);
@@ -55,6 +67,12 @@ window.onload = function () {
 
                 card.appendChild(cardinner);
                 mydiv = document.querySelector("#chordsquare" + (i+1))
+                cardChildren = card.getElementsByTagName("*");
+                for (ii = 0; ii < cardChildren.length; ++ii ) {
+                   cardChildren[ii].draggable = false;
+                   cardChildren[ii].unselectable = true;
+                }
+
                 mydiv.appendChild(card)
             }  
         
@@ -71,6 +89,7 @@ window.onload = function () {
                 let card = document.createElement('div');
 
                 card.classList.add("chess-piece");
+                card.id = "chess-piece-" + (i+1);
                 card.setAttribute("draggable", true);
                 card.addEventListener("drag", dragging);
                 card.addEventListener("dragstart", dragStart);
@@ -117,6 +136,10 @@ window.onload = function () {
 
 // CONSTS --------------------------------------------------------------------------
 
+var key = "C";
+var chords = ["C", "Dm", "Em", "F", "G", "Am", "Bdim"];
+
+
 // Squares in Chord Placement Area
 const squares = document.querySelectorAll(".square, .smallsquare");
 
@@ -139,17 +162,27 @@ sunmoonbuttons.forEach(sunmoonbutton => {
     sunmoonbutton.addEventListener("mouseover",hoverhighlighter)
     sunmoonbutton.addEventListener("click",hoverclick)
     sunmoonbutton.addEventListener("mouseleave",hoverleave)
+    sunmoonbutton.addEventListener("dragstart", dragStartOther);
 }
 )
 
 squares.forEach(square => {
     square.addEventListener("dragover", dragOver)
     square.addEventListener("drop", dragDrop)
+    square.addEventListener("dragend", dragEnd);
+    square.addEventListener("dragstart", dragStartOther);
+    square.setAttribute("draggable", false);
+    square.setAttribute("unselectable", true);
+    square.draggable = false;
+
 }
 )
 
 chordsquares.forEach(chordsquare => {
-    chordsquare.addEventListener("drop", dragDrop)
+    chordsquare.addEventListener("drop", dragDrop);
+    chordsquare.setAttribute("draggable", false);
+    chordsquare.setAttribute("unselectable", true);
+    chordsquare.addEventListener("dragstart", dragStartOther);
 }
 )
 
@@ -158,7 +191,9 @@ chordsquares.forEach(chordsquare => {
 function sunclick(){
     sunmoon = "sun"
     chordsquares.forEach(chordsquare => {
-        chordsquare.innerHTML=""})
+        chordsquare.innerHTML="";
+        chordsquare.setAttribute("unselectable", "on");
+    })
     populatorArray()}
 
 function moonclick(){
@@ -178,21 +213,43 @@ function hoverleave(e){
 let beingDragged
 
 function dragStart (e) {
-    beingDragged = e.target}
 
-function dragging(e){}
+    console.log("Drag starting. Drag target class is: " + e.target.className + " id is: " + e.target.id);
+    beingDragged = e.target;
+
+
+}
+
+function dragStartOther(e) {
+    console.log("something else is being dragged. It is: " + e.target.className+ "id is: " + e.target.id);
+}
+
+function dragging(e){
+
+}
 
 function dragOver (e) {
-    e.preventDefault()}
+   e.preventDefault()
+}
 
 function dragDrop(e) {
-    e.preventDefault();
-
+    if (beingDragged == null) {
+        console.log("Nothing being dragged");
+    }
+    else {
+        console.log("Being dragged class: " + beingDragged.className + " id: " + beingDragged.id);
+    }
+    console.log("Dropping target class: "+ e.target.className + " id: " + e.target.id);
     let targetSquare = e.target.closest('.square, .smallsquare');
 
     if (targetSquare) {
-        targetSquare.innerHTML = "";
-        targetSquare.append(beingDragged);
+        if (beingDragged != null) {
+            targetSquare.innerHTML = "";
+            targetSquare.append(beingDragged);
+            var num = Number(beingDragged.id.charAt(beingDragged.id.length-1));
+            document.getElementById("chordname").innerHTML = chords[num-1];
+            beingDragged = null;
+        }
     }
     
     chordsquares.forEach(chordsquare => {
@@ -206,6 +263,7 @@ function dragDrop(e) {
 }
 
 function dragEnd (e) {
+    beingDragged = null;
 }
 
 

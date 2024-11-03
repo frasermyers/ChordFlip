@@ -5,6 +5,8 @@ body {
     flex-direction: column; /* body items organised vertically */
     width: 100%;
     height: 100%;
+    unselectable: true;
+    draggable: false;
     justify-content: center;
     font-family: "Poppins", sans-serif  ;
     background-color: rgb(155, 211, 217);
@@ -15,12 +17,14 @@ body {
 /* ENTIRE WHITE AREA */
 #playablearea {
     width: 950px;
-    height: 1200px;
+    max-height: 800px;
     background-color: white;
     border-style: solid;
     border-width: 5px;
     border-color: black;
-    margin-top: 40px;
+    margin-top: 20px;
+    draggable: false;
+    unselectable: true;
     border: #c1c1c1;
     display: flex;
     justify-content: center;
@@ -35,9 +39,13 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 40px;
+            draggable: false;
+            unselectable: true;
+            margin-top: 10px;
+            margin-bottom: 40px;
             width: 850px;
-            height: 950px;
+            max-height: 950px;
+            overflow-y:scroll;
             flex-wrap: wrap;
             row-gap:20px;
             border-style: solid;
@@ -47,7 +55,7 @@ body {
             /* Big squares inside Top Section */
             .square {
                 width: 120px; 
-                height: 160px; 
+                height: 60px; //160px;
                 display: flex; 
                 justify-content: center; 
                 align-items: center; 
@@ -61,7 +69,7 @@ body {
             /* Small squares inside Top Section */
             .smallsquare {
                 width: 60px; 
-                height: 80px; 
+                height: 30px; //80px;
                 display: flex; 
                 justify-content: center; 
                 align-items: center; 
@@ -80,7 +88,7 @@ body {
             border-color: rgb(224, 0, 0);
             border-width: 1px; 
             width: 950px; 
-            height: 165px; 
+            height: 165px;
             justify-content: center;
 
         }
