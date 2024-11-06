@@ -14,15 +14,23 @@ body {
 
 }
 
+.pressed {
+    background-color:  rgb(255, 239, 255);/* Change this to your preferred color */
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2); /* Makes it look pressed */
+    border-color: #dfc636;
+    color:#c6df36;
+}
+
 /* ENTIRE WHITE AREA */
 #playablearea {
-    width: 950px;
-    max-height: 800px;
-    background-color: white;
+    width: 1300px;
+    height: 1800px;
+    max-height: 1800px;
+    background-color: rgb(208, 252, 255);
     border-style: solid;
     border-width: 5px;
     border-color: black;
-    margin-top: 20px;
+    margin-top: 30px;
     draggable: false;
     unselectable: true;
     border: #c1c1c1;
@@ -34,35 +42,56 @@ body {
     filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
 }
 
+#section2 {
+    height:1300px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
         /* TOP SECTION */
         #chordboard {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
             draggable: false;
             unselectable: true;
-            margin-top: 10px;
             margin-bottom: 40px;
-            width: 850px;
-            max-height: 950px;
-            overflow-y:scroll;
-            flex-wrap: wrap;
+            margin-top: 40px;
+            width: 1200px;
             row-gap:20px;
             border-style: solid;
             border-color: black;
-            border-width: 1px; 
+            border-width: 0px; 
         }
             /* Big squares inside Top Section */
             .square {
-                width: 120px; 
+                width: 45px; 
                 height: 60px; //160px;
                 display: flex; 
                 justify-content: center; 
                 align-items: center; 
-                border-width:2px;
+                border-width:1px;
                 border-style:dashed;
                 border-color:rgb(171, 218, 214);
                 border-radius: 0.8em;
+                position: relative;
+                background-color: white;
+            }
+
+            .chord-display {
+                width: 45px; 
+                height: 50px; //160px;
+                display: flex; 
+                justify-content: center; 
+                color: rgb(120, 213, 216);
+                align-items: center; 
+                border-width:2px;
+                border-style:solid;
+                border-color:rgb(171, 218, 214);
                 position: relative;
             }
 
@@ -86,10 +115,26 @@ body {
             display: flex;
             border-style: solid;
             border-color: rgb(224, 0, 0);
-            border-width: 1px; 
+            border-width: 0px; 
             width: 950px; 
-            height: 165px;
+            height: 200px;
             justify-content: center;
+            margin-left: 80px;
+
+        }
+
+        .chord-option-display {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-color: black;
+            border-width: 0px;
+            width: 90%;
+            height: 30px;
+            border-style: solid;
+            font-size: 30px;
+            color: rgb(120, 213, 216);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         }
 
@@ -102,13 +147,64 @@ body {
                 align-items: center; 
                 border-style: solid;
                 border-color: rgb(224, 0, 0);
-                border-width: 1px; 
+                border-width: 0px; 
             }
+
+
+            .sectionbox {
+                display: flex;
+                flex-direction: row;
+
+                height:210px;
+                width: 1500px;
+                justify-content: center;
+                border-radius: 0.8em;
+            }
+
+            #sectionbox3 {
+                flex-direction: column;
+            }
+            .basicidea1 {
+                background-color: rgb(249, 255, 254);
+                border-style: solid;
+                border-color: rgb(77, 255, 187);
+                border-width: 1px;
+                
+                
+            }
+
+            .contrastingidea1 {
+                background-color: rgb(249, 255, 254);
+                border-style: solid;
+                border-color: rgb(77, 255, 187);
+                border-width: 1px;
+            }
+
+            .cadence {
+                background-color: #dcffe0;
+            }
+
+        
+        .chord-display {
+            font-size: 30px;
+            border-width: 1px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-style: dashed;
+            border-radius: 0.5em;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: rgb(120, 213, 216);
+            background-color: white;
+        }
 
         /* SECTION TO HOLD SCALE BUTTONS */
         .sunmoonbuttons {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            border-width: 0px;
+            border-color: black;
+            border-style: solid;
+            justify-content: center;
         }
 
             /* Individual Scale Buttons */
@@ -120,14 +216,13 @@ body {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                border-radius: 0.8em;;
+                border-radius: 1em;;
                 align-items: center;
                 margin: 10px;
                 width: 70px;
                 height: 40px;
                 color: rgba(62, 137, 130, 0.655);
                 filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
-                background-color: rgb(255, 255, 255);
             }
 
                 /* Behavior for Scale Buttons */
@@ -139,6 +234,33 @@ body {
                     outline: none;
                 }
 
+        .keybuttons {
+            display: flex;
+            flex-direction: row;
+            width: 700px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+                }
+
+                .keybutton {
+                    border-width:1px;
+                    border-style:solid;
+                    border-color:rgb(171, 218, 214);
+                    font-family: "Poppins",sans-serif;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    border-radius: 1em;;
+                    align-items: center;
+                    margin: 5px;
+                    width: 50px;
+                    height: 30px;
+                    color: rgba(62, 137, 130, 0.655);
+                    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
+                }
+
 .chess-piece {
         width: 90%; /* set width relative to the container */
         height: 90%; /* set height relative to the container */
@@ -147,10 +269,25 @@ body {
         position: relative;
         filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
         cursor: move;
-        border-radius: 0px;
+        border-width: 0px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 0em;
         transition: transform 0.2s;
+        
     }
     
+.chordbox{
+    width: 120px;
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
 .imagesize {
     width: 100%; /* set width relative to the container */
@@ -160,7 +297,7 @@ body {
     position: relative;
     filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
     cursor: move;
-    border-radius: 16px;
+    border-radius: 8px;
     transition: transform 0.2s;}
 
 
@@ -190,7 +327,6 @@ body {
 
 
 
-
 .cardface {
     position: absolute;
     width: 100%;
@@ -210,5 +346,58 @@ body {
     transform: rotateY(180deg);
 }
 
+.firstbeat {
+    border-style: solid;
+    background-color: #ffffff;
+    width:90px;
 
+}
+
+.secondbeat {
+    color:black;
+    border-style: dashed;
+    background-color: white;
+    width:54px;
+}
+
+.secondbeatdrop {
+    height:72px;
+}
+
+.firstbeatdrop {
+    height:120px;
+    border-width: 2px;
+}
+
+.trashcan {
+    border-width: 2px;
+    border-style: solid;
+    width: 80px;
+    border-color: pink;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgb(255, 239, 239);
+}
+
+.section {
+    background-color: rgb(255, 255, 255);
+    border-width: 0px;
+    border-color: black;
+    border-style: solid;
+    width: 1300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.8em;
+    margin: 20px;
+    justify-content: center;
+}
+
+#section3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
 
