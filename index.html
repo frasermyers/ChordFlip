@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 
-<!-- SETUP ------------------------------------------------------------------------> 
 <html lang="en">
 
-<!-- HEAD -------------------------------------------------------------------------> 
 <head>
     <meta charset="UTF-8"> <!-- character set -->
     <title>Chord Flip</title> <!-- title of document -->
     <link rel="stylesheet" href="style.css"> <!-- links css -->
 </head>
 
-<!-- BODY -------------------------------------------------------------------------> 
 <body>
     
     <div id="playablearea">
-        <!-- CHORD BOARD ----------------------------------------------------------->
 
+        <!-- KEY CHANGE SECTION-->
         <div id="section1" class="section">
 
             <div class="keybuttons">
+                <!-- KEYBUTTONS -->
                 <button class="keybutton" id="C-Button">C</button>
                 <button class="keybutton" id="C#-Button">C#</button>
                 <button class="keybutton" id="D-Button">D</button>
@@ -31,369 +29,31 @@
                 <button class="keybutton" id="A-Button">A</button>
                 <button class="keybutton" id="Bb-Button">Bb</button>
                 <button class="keybutton" id="B-Button">B</button>
-                <div id="trashcan" class="square trashcan" ></div>
+                <!-- TRASHCAN -->
+                <div id="trashcan" class="cardslot trashcan" ></div>
             </div>
         </div>
 
+
+        <!-- BOARD SECTION -->
         <div id="section2" class="section">
-
-
-        
-        
-
-        <div id="chordboard">
-
-            <div class="basicidea1 sectionbox">
-
-            <div id="dragsquare1" class="dragsquare" >
-                <div id="chorddisplay1" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard1"  data-box="1" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare2" class="dragsquare" >
-                <div id="chorddisplay2" class="chord-display"></div>
-                <div class="square" id="chordboard2"  data-box="2" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare3" class="dragsquare" >
-                <div id="chorddisplay3" class="chord-display"></div>
-                <div class="square" id="chordboard3"  data-box="3" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare4" class="dragsquare" >
-                <div id="chorddisplay4" class="chord-display"></div>
-                <div class="square" id="chordboard4"  data-box="4" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare5" class="dragsquare" >
-                <div id="chorddisplay5" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard5"  data-box="5" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare6" class="dragsquare" >
-                <div id="chorddisplay6" class="chord-display"></div>
-                <div class="square" id="chordboard6"  data-box="6" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare7" class="dragsquare" >
-                <div id="chorddisplay7" class="chord-display"></div>
-                <div class="square" id="chordboard7"  data-box="7" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare8" class="dragsquare" >
-                <div id="chorddisplay8" class="chord-display"></div>
-                <div class="square" id="chordboard8"  data-box="8" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare9" class="dragsquare" >
-                <div id="chorddisplay9" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard9"  data-box="9" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare10" class="dragsquare" >
-                <div id="chorddisplay10" class="chord-display"></div>
-                <div class="square" id="chordboard10"  data-box="10" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare11" class="dragsquare" >
-                <div id="chorddisplay11" class="chord-display"></div>
-                <div class="square" id="chordboard11"  data-box="11" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare12" class="dragsquare" >
-                <div id="chorddisplay12" class="chord-display"></div>
-                <div class="square" id="chordboard12"  data-box="12" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare13" class="dragsquare" >
-                <div id="chorddisplay13" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard13"  data-box="13" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare14" class="dragsquare" >
-                <div id="chorddisplay14" class="chord-display"></div>
-                <div class="square" id="chordboard14"  data-box="14" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare15" class="dragsquare" >
-                <div id="chorddisplay15" class="chord-display"></div>
-                <div class="square" id="chordboard15"  data-box="15" draggable="false"></div>
-            </div>
-
-            <div id="dragsquare16" class="dragsquare" >
-                <div id="chorddisplay16" class="chord-display"></div>
-                <div class="square" id="chordboard16"  data-box="16" draggable="false"></div>
-            </div>
-
-        </div>
-
-        <!--
-
-        <div class="contrastingidea1 sectionbox">
-            <div id="dragsquare17" class="dragsquare">
-                <div id="chorddisplay17" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard17" data-box="17" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare18" class="dragsquare">
-                <div id="chorddisplay18" class="chord-display"></div>
-                <div class="square" id="chordboard18" data-box="18" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare19" class="dragsquare">
-                <div id="chorddisplay19" class="chord-display"></div>
-                <div class="square" id="chordboard19" data-box="19" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare20" class="dragsquare">
-                <div id="chorddisplay20" class="chord-display"></div>
-                <div class="square" id="chordboard20" data-box="20" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare21" class="dragsquare">
-                <div id="chorddisplay21" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard21" data-box="21" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare22" class="dragsquare">
-                <div id="chorddisplay22" class="chord-display"></div>
-                <div class="square" id="chordboard22" data-box="22" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare23" class="dragsquare">
-                <div id="chorddisplay23" class="chord-display"></div>
-                <div class="square" id="chordboard23" data-box="23" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare24" class="dragsquare">
-                <div id="chorddisplay24" class="chord-display"></div>
-                <div class="square" id="chordboard24" data-box="24" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare25" class="dragsquare">
-                <div id="chorddisplay25" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard25" data-box="25" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare26" class="dragsquare">
-                <div id="chorddisplay26" class="chord-display"></div>
-                <div class="square" id="chordboard26" data-box="26" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare27" class="dragsquare">
-                <div id="chorddisplay27" class="chord-display"></div>
-                <div class="square" id="chordboard27" data-box="27" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare28" class="dragsquare">
-                <div id="chorddisplay28" class="chord-display"></div>
-                <div class="square" id="chordboard28" data-box="28" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare29" class="dragsquare">
-                <div id="chorddisplay29" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard29" data-box="29" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare30" class="dragsquare">
-                <div id="chorddisplay30" class="chord-display"></div>
-                <div class="square" id="chordboard30" data-box="30" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare31" class="dragsquare">
-                <div id="chorddisplay31" class="chord-display"></div>
-                <div class="square" id="chordboard31" data-box="31" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare32" class="dragsquare">
-                <div id="chorddisplay32" class="chord-display"></div>
-                <div class="square" id="chordboard32" data-box="32" draggable="false"></div>
-            </div>
-        </div>
-
-        
-
-        <div class="basicidea1 sectionbox">
-            <div id="dragsquare33" class="dragsquare">
-                <div id="chorddisplay33" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard33" data-box="33" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare34" class="dragsquare">
-                <div id="chorddisplay34" class="chord-display"></div>
-                <div class="square" id="chordboard34" data-box="34" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare35" class="dragsquare">
-                <div id="chorddisplay35" class="chord-display"></div>
-                <div class="square" id="chordboard35" data-box="35" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare36" class="dragsquare">
-                <div id="chorddisplay36" class="chord-display"></div>
-                <div class="square" id="chordboard36" data-box="36" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare37" class="dragsquare">
-                <div id="chorddisplay37" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard37" data-box="37" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare38" class="dragsquare">
-                <div id="chorddisplay38" class="chord-display"></div>
-                <div class="square" id="chordboard38" data-box="38" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare39" class="dragsquare">
-                <div id="chorddisplay39" class="chord-display"></div>
-                <div class="square" id="chordboard39" data-box="39" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare40" class="dragsquare">
-                <div id="chorddisplay40" class="chord-display"></div>
-                <div class="square" id="chordboard40" data-box="40" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare41" class="dragsquare">
-                <div id="chorddisplay41" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard41" data-box="41" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare42" class="dragsquare">
-                <div id="chorddisplay42" class="chord-display"></div>
-                <div class="square" id="chordboard42" data-box="42" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare43" class="dragsquare">
-                <div id="chorddisplay43" class="chord-display"></div>
-                <div class="square" id="chordboard43" data-box="43" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare44" class="dragsquare">
-                <div id="chorddisplay44" class="chord-display"></div>
-                <div class="square" id="chordboard44" data-box="44" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare45" class="dragsquare">
-                <div id="chorddisplay45" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard45" data-box="45" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare46" class="dragsquare">
-                <div id="chorddisplay46" class="chord-display"></div>
-                <div class="square" id="chordboard46" data-box="46" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare47" class="dragsquare">
-                <div id="chorddisplay47" class="chord-display"></div>
-                <div class="square" id="chordboard47" data-box="47" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare48" class="dragsquare">
-                <div id="chorddisplay48" class="chord-display"></div>
-                <div class="square" id="chordboard48" data-box="48" draggable="false"></div>
-            </div>
+            <div id="board"></div>
         </div>
         
-        <div class="cadence sectionbox">
-            <div id="dragsquare49" class="dragsquare">
-                <div id="chorddisplay49" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard49" data-box="49" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare50" class="dragsquare">
-                <div id="chorddisplay50" class="chord-display"></div>
-                <div class="square" id="chordboard50" data-box="50" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare51" class="dragsquare">
-                <div id="chorddisplay51" class="chord-display"></div>
-                <div class="square" id="chordboard51" data-box="51" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare52" class="dragsquare">
-                <div id="chorddisplay52" class="chord-display"></div>
-                <div class="square" id="chordboard52" data-box="52" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare53" class="dragsquare">
-                <div id="chorddisplay53" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard53" data-box="53" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare54" class="dragsquare">
-                <div id="chorddisplay54" class="chord-display"></div>
-                <div class="square" id="chordboard54" data-box="54" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare55" class="dragsquare">
-                <div id="chorddisplay55" class="chord-display"></div>
-                <div class="square" id="chordboard55" data-box="55" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare56" class="dragsquare">
-                <div id="chorddisplay56" class="chord-display"></div>
-                <div class="square" id="chordboard56" data-box="56" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare57" class="dragsquare">
-                <div id="chorddisplay57" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard57" data-box="57" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare58" class="dragsquare">
-                <div id="chorddisplay58" class="chord-display"></div>
-                <div class="square" id="chordboard58" data-box="58" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare59" class="dragsquare">
-                <div id="chorddisplay59" class="chord-display"></div>
-                <div class="square" id="chordboard59" data-box="59" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare60" class="dragsquare">
-                <div id="chorddisplay60" class="chord-display"></div>
-                <div class="square" id="chordboard60" data-box="60" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare61" class="dragsquare">
-                <div id="chorddisplay61" class="chord-display firstbeat"></div>
-                <div class="square firstbeat firstbeatdrop" id="chordboard61" data-box="61" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare62" class="dragsquare">
-                <div id="chorddisplay62" class="chord-display"></div>
-                <div class="square" id="chordboard62" data-box="62" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare63" class="dragsquare">
-                <div id="chorddisplay63" class="chord-display"></div>
-                <div class="square" id="chordboard63" data-box="63" draggable="false"></div>
-            </div>
-        
-            <div id="dragsquare64" class="dragsquare">
-                <div id="chorddisplay64" class="chord-display"></div>
-                <div class="square" id="chordboard64" data-box="64" draggable="false"></div>
-            </div>
-        </div>
 
-    -->
-    
-           
-    
-
-
- 
-        </div>
-
-
-    </div>
-        
+        <!-- CARD LOAD SECTION -->
         <div id="section3" class="section">
 
 
-        <!-- CHORD OPTIONS ------------------------------------------------------------>
         <div id="chordoptions" draggable="False">
+
+
+            
+            
+            
+            
+            
+
 
             <div id="chordoptioncontainer1" class="chordbox">
                 <div id="chordoptiondisplay1" class="chord-option-display"></div>
@@ -442,10 +102,27 @@
 
     </div>
         
+    <div id="cardPopup" class="popup-modal hidden">
+        <div class="popup-content">
+            <h2>Card Information</h2>
+            <div class="popupimagescontainer">
+                <div id="popupcurrentcard">
+                    <p>Main</p>
+                    <img id="popupFrontImage" class="popup-card-image" src="" alt="Card Front">
+                </div>
 
+                <div id="popupflippedcard">
+                    <p>Reversed</p>
+                    <img id="popupBackImage" class="popup-card-image" src="" alt="Card Back">
+                </div>
+         
+        </div>
+        </div>
+    </div>
+    
+    
 
-    <!-- INFO ---------------------------------------------------------------------->
-    <script src="index.js"></script> <!-- links the javascript-->
+    <script src="index.js"></script> 
 
 </div>
 

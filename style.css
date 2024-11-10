@@ -1,24 +1,11 @@
 body {
-    display: flex; /* flexible display */
-    justify-content: center; /* center content horizontal */
-    align-items: center; /* center content vertical */
-    flex-direction: column; /* body items organised vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    unselectable: true;
-    draggable: false;
-    justify-content: center;
-    font-family: "Poppins", sans-serif  ;
     background-color: rgb(155, 211, 217);
-    overflow: hidden;
-
-}
-
-.pressed {
-    background-color:  rgb(255, 239, 255);/* Change this to your preferred color */
-    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2); /* Makes it look pressed */
-    border-color: #dfc636;
-    color:#c6df36;
 }
 
 /* ENTIRE WHITE AREA */
@@ -42,242 +29,200 @@ body {
     filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
 }
 
+/* SECTION 2 */
 #section2 {
     height:1300px;
     display: flex;
     justify-content: center;
 }
 
+/* BOARD THAT HOLDS ALL BARS */
+#board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 1200px;
+    row-gap:20px;
+    gap: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px; 
+}
 
+.cardslot {
+    width: 45px; 
+    height: 60px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-width:1px;
+    border-style:dashed;
+    border-color:rgb(171, 218, 214);
+    border-radius: 0.8em;
+    position: relative;
+    background-color: white;
+}
 
+.symbol {
+    width: 45px; 
+    height: 50px;
+    display: flex; 
+    justify-content: center; 
+    color: rgb(120, 213, 216);
+    align-items: center; 
+    border-width:2px;
+    border-style:solid;
+    border-color:rgb(171, 218, 214);
+    position: relative;
+}
 
-        /* TOP SECTION */
-        #chordboard {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            draggable: false;
-            unselectable: true;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            width: 1200px;
-            row-gap:20px;
-            border-style: solid;
-            border-color: black;
-            border-width: 0px; 
-        }
-            /* Big squares inside Top Section */
-            .square {
-                width: 45px; 
-                height: 60px; //160px;
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                border-width:1px;
-                border-style:dashed;
-                border-color:rgb(171, 218, 214);
-                border-radius: 0.8em;
-                position: relative;
-                background-color: white;
-            }
+/* BOTTOM SECTION */
+#chordoptions {
+    display: flex;
+    border-style: solid;
+    border-color: rgb(224, 0, 0);
+    border-width: 0px; 
+    width: 950px; 
+    height: 200px;
+    justify-content: center;
+    margin-left: 80px;
+}
 
-            .chord-display {
-                width: 45px; 
-                height: 50px; //160px;
-                display: flex; 
-                justify-content: center; 
-                color: rgb(120, 213, 216);
-                align-items: center; 
-                border-width:2px;
-                border-style:solid;
-                border-color:rgb(171, 218, 214);
-                position: relative;
-            }
+.chord-option-display {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    border-width: 0px;
+    width: 90%;
+    height: 30px;
+    border-style: solid;
+    font-size: 30px;
+    color: rgb(120, 213, 216);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-            /* Small squares inside Top Section */
-            .smallsquare {
-                width: 60px; 
-                height: 30px; //80px;
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                border-width:1px;
-                border-style:dashed;
-                border-color:rgb(171, 218, 214);
-                border-radius: 0.8em;
-                position: relative;
-            
-            }
+.chordsquare {
+    width: 120px; 
+    height: 160px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-style: solid;
+    border-color: rgb(224, 0, 0);
+    border-width: 0px; 
+}
 
-        /* BOTTOM SECTION */
-        #chordoptions {
-            display: flex;
-            border-style: solid;
-            border-color: rgb(224, 0, 0);
-            border-width: 0px; 
-            width: 950px; 
-            height: 200px;
-            justify-content: center;
-            margin-left: 80px;
+.bar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height:210px;
+    width: 300px;
+    justify-content: center;
+    border-radius: 0.8em;
+    background-color: rgb(249, 255, 254);
+    border-style: solid;
+    border-color: rgb(77, 255, 187);
+    border-width: 1px;
+}
 
-        }
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1200px;
+    gap: 10px; /* Space between bars in each row */
+}
 
-        .chord-option-display {
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            border-color: black;
-            border-width: 0px;
-            width: 90%;
-            height: 30px;
-            border-style: solid;
-            font-size: 30px;
-            color: rgb(120, 213, 216);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.symbol {
+    font-size: 30px;
+    border-width: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-style: dashed;
+    border-radius: 0.5em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: rgb(120, 213, 216);
+    background-color: white;
+}
 
-        }
+/* SECTION TO HOLD SCALE BUTTONS */
+.sunmoonbuttons {
+    display: flex;
+    flex-direction: column;
+    border-width: 0px;
+    border-color: black;
+    border-style: solid;
+    justify-content: center;
+}
 
-            /*  card Holders in Bottom Section */
-            .chordsquare {
-                width: 120px; 
-                height: 160px; 
-                display: flex; 
-                justify-content: center;
-                align-items: center; 
-                border-style: solid;
-                border-color: rgb(224, 0, 0);
-                border-width: 0px; 
-            }
+.sunmoonbutton {
+    border-width:1px;
+    border-style:solid;
+    border-color:rgb(171, 218, 214);
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1em;
+    align-items: center;
+    margin: 10px;
+    width: 70px;
+    height: 40px;
+    color: rgba(62, 137, 130, 0.655);
+    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
+}
 
+.sunmoonbutton:active {
+    background: #e5e5e5;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
 
-            .sectionbox {
-                display: flex;
-                flex-direction: row;
+.keybuttons {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
 
-                height:210px;
-                width: 1500px;
-                justify-content: center;
-                border-radius: 0.8em;
-            }
+.keybutton {
+    border-width:1px;
+    border-style:solid;
+    border-color:rgb(171, 218, 214);
+    font-family: "Poppins",sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1em;
+    align-items: center;
+    margin: 5px;
+    width: 50px;
+    height: 30px;
+    color: rgba(62, 137, 130, 0.655);
+    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
+}
 
-            #sectionbox3 {
-                flex-direction: column;
-            }
-            .basicidea1 {
-                background-color: rgb(249, 255, 254);
-                border-style: solid;
-                border-color: rgb(77, 255, 187);
-                border-width: 1px;
-                
-                
-            }
+.playingcard {
+    width: 90%;
+    height: 90%;
+    max-width: 100px;
+    max-height: 140px;
+    position: relative;
+    cursor: move;
+    transition: transform 0.2s;
+    perspective: 1000px; /* perspective for 3D flip */
+}
 
-            .contrastingidea1 {
-                background-color: rgb(249, 255, 254);
-                border-style: solid;
-                border-color: rgb(77, 255, 187);
-                border-width: 1px;
-            }
-
-            .cadence {
-                background-color: #dcffe0;
-            }
-
-        
-        .chord-display {
-            font-size: 30px;
-            border-width: 1px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            border-style: dashed;
-            border-radius: 0.5em;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            color: rgb(120, 213, 216);
-            background-color: white;
-        }
-
-        /* SECTION TO HOLD SCALE BUTTONS */
-        .sunmoonbuttons {
-            display: flex;
-            flex-direction: column;
-            border-width: 0px;
-            border-color: black;
-            border-style: solid;
-            justify-content: center;
-        }
-
-            /* Individual Scale Buttons */
-            .sunmoonbutton {
-                border-width:1px;
-                border-style:solid;
-                border-color:rgb(171, 218, 214);
-                font-family: "Poppins",sans-serif;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                border-radius: 1em;;
-                align-items: center;
-                margin: 10px;
-                width: 70px;
-                height: 40px;
-                color: rgba(62, 137, 130, 0.655);
-                filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
-            }
-
-                /* Behavior for Scale Buttons */
-                .sunmoonbutton:active {
-                    background: #e5e5e5;
-                    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-                    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-                            box-shadow: inset 0px 0px 5px #c1c1c1;
-                    outline: none;
-                }
-
-        .keybuttons {
-            display: flex;
-            flex-direction: row;
-            width: 700px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            justify-content: center;
-            align-items: center;
-                }
-
-                .keybutton {
-                    border-width:1px;
-                    border-style:solid;
-                    border-color:rgb(171, 218, 214);
-                    font-family: "Poppins",sans-serif;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    border-radius: 1em;;
-                    align-items: center;
-                    margin: 5px;
-                    width: 50px;
-                    height: 30px;
-                    color: rgba(62, 137, 130, 0.655);
-                    filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.235));
-                }
-
-.chess-piece {
-        width: 90%; /* set width relative to the container */
-        height: 90%; /* set height relative to the container */
-        max-width: 100px; /* optional: set a maximum size if needed */
-        max-height: 140px; /* optional: set a maximum size if needed */
-        position: relative;
-        filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
-        cursor: move;
-        border-width: 0px;
-        border-style: solid;
-        border-color: black;
-        border-radius: 0em;
-        transition: transform 0.2s;
-        
-    }
-    
-.chordbox{
+.chordbox {
     width: 120px;
     height: 200px;
     border-style: solid;
@@ -290,16 +235,16 @@ body {
 }
 
 .imagesize {
-    width: 100%; /* set width relative to the container */
-    height: 100%; /* set height relative to the container */
-    max-width: 100px; /* optional: set a maximum size if needed */
-    max-height: 140px; /* optional: set a maximum size if needed */
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 140px;
     position: relative;
     filter: drop-shadow(0 0.3em 0.9em rgba(0, 0, 0, 0.25));
     cursor: move;
     border-radius: 8px;
-    transition: transform 0.2s;}
-
+    transition: transform 0.2s;
+}
 
 .highlight {
     background-color: rgb(255, 239, 255);
@@ -309,59 +254,44 @@ body {
     background-color: rgb(250, 180, 251);
 }
 
+/* Card Flip Styling */
 .cardinner {
+    position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 1s;
     transform-style: preserve-3d;
-    cursor:crosshair;
-    position: relative;
+    transition: transform 0.6s;
 }
 
-
-
-.cardinner__isflipped {
+.cardinner.flipped {
     transform: rotateY(180deg);
+    color: black;
 }
-
-
-
 
 .cardface {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    overflow:hidden;
     border-radius: 16px;
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-
+    overflow: hidden;
 }
 
 .cardinnerfront {
+    transform: rotateY(0deg);
+    z-index: 1;
 }
 
 .cardinnerback {
     transform: rotateY(180deg);
+    z-index: -1;
 }
 
 .firstbeat {
     border-style: solid;
     background-color: #ffffff;
     width:90px;
-
-}
-
-.secondbeat {
-    color:black;
-    border-style: dashed;
-    background-color: white;
-    width:54px;
-}
-
-.secondbeatdrop {
-    height:72px;
 }
 
 .firstbeatdrop {
@@ -400,4 +330,102 @@ body {
     justify-content: center;
     height: 250px;
 }
+
+.pressed {
+    background-color:  rgb(243, 145, 243);
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-color: #36df36;
+    color:#000000;
+}
+
+.popup-modal {
+    /* Modal overlay styling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+.popup-modal.hidden {
+    display: none;
+}
+
+.popup-modal.visible {
+    display: flex; /* Shows the modal */
+}
+
+.popup-content {
+ /* Set this so the close button is positioned relative to the popup */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;   
+ background-color: #fff;
+    padding: 20px;
+    height: 600px;
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+#popupImage {
+    display: block;
+    margin: 10px auto; /* Centers the image horizontally and adds some space above */
+    border-radius: 10px; /* Adjust the radius to your preference */
+    max-width: 100%; /* Ensures the image scales within the popup */
+    max-height: 300px;
+}
+
+
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fcc0c0;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #a6f6fc;
+}
+
+
+
+
+
+.popup-card-image {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Rounded edges */
+    display: block;
+}
+.popupimagescontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 400px;
+    width: 400px;
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+
+
 
